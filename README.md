@@ -29,18 +29,6 @@ ENVATO_PERSONAL_TOKEN=your_actual_envato_personal_token
 ## Usage
 
 ```php
-use AticMatic\EnvatoPHP\EnvatoPHP;
-
-$envatoApi = app('envato-php'); // Or use the facade if you set it up
-
-try {
-    $itemDetails = $envatoApi->getItemDetails(20787128); // Example Item ID
-    // Process $itemDetails (e.g., dd($itemDetails);)
-} catch (\Exception $e) {
-    // Handle the exception (log, display error message, etc.)
-    echo "Error: " . $e->getMessage();
-    Log::error($e); // Log the exception for debugging
-}
 
 Example using the Facade (if you added it to config/app.php aliases):
 use AticMatic\EnvatoPHP\Facades\EnvatoPHP;

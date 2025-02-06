@@ -24,8 +24,6 @@ php artisan vendor:publish --tag=envato-php-config
 ENVATO_PERSONAL_TOKEN=your_actual_envato_personal_token
 ```
 
-**Important:** Do not commit your `.env` file to version control.
-
 ## Usage
 
 ```php
@@ -43,10 +41,10 @@ try {
 
 ## Available Methods
 
-(Add documentation for each API method you implement)
+(Documentation will get updated for each API method as implemented)
 
 - `getItemDetails(int $itemId)`: Retrieves details about a specific Envato item. Returns an array of item data or throws an exception on error.
-- (Add other methods here as you develop them)
+- (Other methods will be here as we develop them)
 
 ## Error Handling
 

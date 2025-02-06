@@ -30,8 +30,9 @@ ENVATO_PERSONAL_TOKEN=your_actual_envato_personal_token
 
 ```php
 
-Example using the Facade (if you added it to config/app.php aliases):
+
 use AticMatic\EnvatoPHP\Facades\EnvatoPHP;
+
 try {
      $itemDetails = EnvatoPHP::getItemDetails(20787128);
 } catch (\Exception $e) {

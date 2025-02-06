@@ -42,11 +42,14 @@ try {
     Log::error($e); // Log the exception for debugging
 }
 
-// Example using the Facade (if you added it to config/app.php aliases):
-// use AticMatic\EnvatoPHP\Facades\EnvatoPHP;
-// try {
-//      $itemDetails = EnvatoPHP::getItemDetails(20787128);
-// } // ... etc.
+Example using the Facade (if you added it to config/app.php aliases):
+use AticMatic\EnvatoPHP\Facades\EnvatoPHP;
+try {
+     $itemDetails = EnvatoPHP::getItemDetails(20787128);
+} catch (\Exception $e) {
+    echo "Error: " . $e->getMessage();
+    Log::error($e);
+}
 ```
 
 ## Available Methods

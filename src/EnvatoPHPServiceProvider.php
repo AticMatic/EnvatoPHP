@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\App; // Import the App facade
 
 class EnvatoPHPServiceProvider extends ServiceProvider
 {
@@ -16,6 +17,11 @@ class EnvatoPHPServiceProvider extends ServiceProvider
         $this->app->singleton('envato-php', function ($app) {
             $personalToken = Config::get('envato-php.personal_token');
             return new EnvatoPHP($personalToken);
+        });
+
+        // Register the facade (optional but recommended).
+        App::bind('envato-php', function ($app) {
+            return new EnvatoPHP(Config::get('envato-php.personal_token'));
         });
     }
 
